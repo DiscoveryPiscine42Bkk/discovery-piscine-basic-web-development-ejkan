@@ -7,17 +7,19 @@ body{
     color: #111812;
     font-size: 1rem;
     margin:auto;
-    padding:1%;
-    display: flex;
-    justify-content: center;
+    padding:5%;
 }
 
 .dropdown{
+    margin-left: 50%;
+    margin-right: auto;
     position: relative;
     display: inline-block;
+    padding-top: 1%;
 }
 
 .dropdown-content{
+    text-align: center;
     display: none;
     position: absolute;
     background-color: #FBFFF4;
@@ -41,6 +43,9 @@ body{
 
 .dropdown:hover .dropdown-content {
     display: block;
+    margin-left: -20%;
+    margin-right: auto;
+    padding-top: 10%;
 }
 
 .dropdownbtn:hover{
