@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive</title>
+        <style>
+            body{
+                padding: 0%;
+                margin: 0%;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: 0;
+            }
+            div {
+                font-size: 1.5rem;
+                border: .07em solid black;
+            }
+            #cell1{
+                padding: 100% 0;
+                background-color: lightgreen;
+                height: 99.5vh;
+            }
+            #cell2{
+                padding: 100% 0;
+                background-color: lightpink;
+                height: 99.5vh;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div id="cell1">XYZ</div>
+            <div id="cell2">CBA</div>
+        </div>
+    </body>
+</html>
