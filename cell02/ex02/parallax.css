@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height: 100%
+}
+
+#pic1{
+    background-image: url('https://4kwallpapers.com/images/wallpapers/oppo-pad-4-pro-5120x5120-22261.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+}
+
+#pic2{
+    background-image: url('https://4kwallpapers.com/images/wallpapers/oppo-pad-4-pro-dark-5120x5120-22260.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+#pic3{
+    background-image: url('https://4kwallpapers.com/images/wallpapers/oppo-pad-4-pro-pink-5120x5118-22258.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.txtbox{
+    color: #313638;
+    font-size: 2rem;
+    margin:auto;
+    padding:10%;
+    text-align: center;
+}
+.txt{
+    position: absolute;
+    color: #6ca6c1;
+    font-size: 2rem;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+}
