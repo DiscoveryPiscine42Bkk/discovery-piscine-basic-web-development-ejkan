@@ -48,17 +48,20 @@
 
 
                                     <div class="form-outline mb-3">
-                                        <input type="text" id="firstNum" class="form-control form-control-lg"/>
+                                        <p class="lead mb-3">Enter First Number</p>
+                                        <input type="text" id="firstNum" class="form-control form-control-lg" />
                                     </div>
-                                    <select class="form-select mb-3" id="expression" aria-label="Default select example">
-                                        <option value="+" >+</option>
-                                        <option value="-" >-</option>
-                                        <option value="*" >*</option>
-                                        <option value="/" >/</option>
-                                        <option value="%" >%</option>
+                                    <select class="form-select mb-3" id="expression"
+                                        aria-label="Default select example">
+                                        <option value="+">+</option>
+                                        <option value="-">-</option>
+                                        <option value="*">*</option>
+                                        <option value="/">/</option>
+                                        <option value="%">%</option>
 
                                     </select>
                                     <div class="form-outline mb-5">
+                                        <p class="lead mb-3">Enter Second Number</p>
                                         <input type="text" id="secondNum" class="form-control form-control-lg" />
                                     </div>
 
@@ -77,52 +80,58 @@
     </section>
 </body>
 <script>
+    let overLoad = "It's over 9000!";
+    let errMsg = "Error :( Number is invalid";
+    setInterval(() => { alert('Please Use Me...')}, 30000);
     function validateNum() {
         let fNum = document.getElementById("firstNum").value;
         let sNum = document.getElementById("secondNum").value;
         if (isNaN(fNum) || fNum < 0) {
-            alert("Error :(");
+            alert(errMsg);
         }
         else if (isNaN(sNum) || sNum < 0) {
-            alert("Error :(");
+            alert(errMsg);
         }
-        else{
+        else {
             let num1 = parseInt(document.getElementById("firstNum").value);
             let num2 = parseInt(document.getElementById("secondNum").value);
             let expressions = document.getElementById("expression").value;
-            if (expressions == "+"){
+            if (expressions == "+") {
                 let sum = num1 + num2;
                 alert(sum);
                 console.log(sum);
             }
-            if (expressions == "-"){
+            if (expressions == "-") {
                 let sub = num1 - num2;
                 alert(sub);
                 console.log(sub);
             }
-            if (expressions == "*"){
+            if (expressions == "*") {
                 let mul = num1 * num2;
                 alert(mul);
                 console.log(mul);
             }
-            if (expressions == "/"){
+            if (expressions == "/") {
                 let divide = num1 / num2;
-                if(isFinite(divide)){
+                let mod = num1 % num2;
+                if (isFinite(divide)) {
                     alert(divide);
                     console.log(divide);
                 }
-                else{
-                    alert("It's over 9000!");
+                else {
+                    alert(overLoad);
+                    console.log(overLoad);
                 }
             }
-            if (expressions == "%"){
-                let modu = num1 % num2;
-                if(isFinite(modu)){
-                    alert(modu);
-                    console.log(modu);
+            if (expressions == "%") {
+                let mod = num1 % num2;
+                if (isFinite(mod)) {
+                    alert(mod);
+                    console.log(mod);
                 }
-                else{
-                    alert("It's over 9000!");
+                else {
+                    alert(overLoad);
+                    console.log(overLoad);
                 }
             }
         }
