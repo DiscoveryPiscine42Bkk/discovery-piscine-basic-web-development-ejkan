@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #balloon {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 45vw;
+        margin-right: auto;
+        margin-top: 45%;
+        margin-bottom: auto;
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explode this balloon</title>
+</head>
+
+<body>
+    <botton id="balloon" onmouseleave="decreaseS()" onclick="increaseS()"></botton>
+    <script>
+        const colour = ["red", "green", "blue"];
+        let len = colour.length;
+        let i = 0;
+        function increaseS() {
+            var balloon = document.getElementById("balloon");
+            var currW = balloon.clientWidth;
+            var currH = balloon.clientHeight;
+            i++;
+            if (i > 2) {
+                i = 0;
+            }
+            if (currW < 420 || currH < 420) {
+                balloon.style.width = (currW + 10) + "px";
+                balloon.style.height = (currH + 10) + "px";
+                balloon.style.backgroundColor = (colour[i]);
+            }
+            else {
+                balloon.style.width = (200) + "px";
+                balloon.style.height = (200) + "px";
+                balloon.style.backgroundColor = (colour[i]);
+            }
+        }
+        function decreaseS() {
+            var balloon = document.getElementById("balloon");
+            var currW = balloon.clientWidth;
+            var currH = balloon.clientHeight;
+            i--;
+            if (i < 0) {
+                i = 2;
+            }
+            if (currW > 200 || currH > 200) {
+                balloon.style.width = (currW - 5) + "px";
+                balloon.style.height = (currH - 5) + "px";
+                balloon.style.backgroundColor = (colour[i]);
+            }
+            else {
+                balloon.style.width = (200) + "px";
+                balloon.style.height = (200) + "px";
+                balloon.style.backgroundColor = (colour[i]);
+            }
+        }
+    </script>
+</body>
+
+
+</html>
